@@ -1,0 +1,46 @@
+{% extends "AppGema/padre.html" %}
+
+
+{% load static %}
+
+{% block titulo %}
+
+CLIENTES
+
+
+{% endblock %}
+
+{% block boton %}
+
+<form action="/AppGema/resultado_busqueda/"method="get"> 
+
+
+<input type="text" name = "nombre">
+
+<input type="submit" value=" Buscar">    
+
+
+
+</form>
+
+
+<style>
+    .mesnaje {
+
+        color:white
+    }
+
+</style>
+
+<p class="mensaje">{{ mensaje }}</p>
+
+
+{% for huespedes in resultado %}
+
+    <p>{{huespedes}}</p>
+
+{% endfor %}
+
+
+{% endblock %}
+

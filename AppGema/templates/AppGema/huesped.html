@@ -1,0 +1,26 @@
+{% extends "AppGema/padre.html" %}
+
+
+{% load static %}
+
+{% block titulo %}
+
+BIENVENIDO
+
+
+{% endblock %}
+
+{% block boton %}
+
+<form action=""method="post"> {% csrf_token %}
+
+{{formu}}
+
+<input type="submit" value="Registrarse">    
+
+
+
+</form>
+
+{% endblock %}
+
